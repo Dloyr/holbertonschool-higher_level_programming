@@ -3,6 +3,6 @@
 
 for numbers in range(0, 100):
     if (numbers < 99):
-        print(f"{numbers:02d}", end=", ")
+        print("{:02}".format(numbers), end=", ")
     else:
         print(numbers)
