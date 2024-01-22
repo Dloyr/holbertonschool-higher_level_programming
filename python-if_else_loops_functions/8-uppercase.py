@@ -10,4 +10,4 @@ def uppercase(str):
         else:
             upper_string += letter
 
-    print(upper_string)
+    print("{:s}".format(upper_string))
