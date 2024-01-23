@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import sys
+if __name__ == "__main__":
+    import sys
 
 # print the number and the list of word in the input
 argv = sys.argv[1:]
