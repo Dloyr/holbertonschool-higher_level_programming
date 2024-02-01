@@ -1,2 +1,4 @@
 .devcontainer
 .github
+*-main.py
+*.pyc
