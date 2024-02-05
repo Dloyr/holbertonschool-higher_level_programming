@@ -36,3 +36,8 @@ class Square:
     def area(self):
         """ class method for obtain the area of the square """
         return self.__size * self.__size
+
+    def my_print(self):
+        """ class method for print the square """
+        for row in range(self.__size):
+            print("#" * self.__size)

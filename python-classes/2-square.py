@@ -1,7 +1,18 @@
 #!/usr/bin/python3
-# Defines a square and implement exceptions messages
+
+""" defines a Squares"""
+
+
 class Square:
+    """ defines a square with is size """
+
     def __init__(self, size=0):
+        """ define instance of a square with size
+
+        Args:
+            size (int): Size of the square
+        """
+
         self.__size = size
         if (size is not int(size)):
             raise TypeError("size must be an integer")
