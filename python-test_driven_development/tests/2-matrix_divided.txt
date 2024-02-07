@@ -1,5 +1,5 @@
 The 2-matrix_divided Module
-========================
+===========================
 
 Module to import to use ''matrix_divided''
 This module defines a function that divided a matrix per a value stock in div
