@@ -12,20 +12,22 @@ class Rectangle:
             width: width of the rectangle
             height: height of the rectangle
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
         """class method for take the width of the rectangle"""
+
         return self.__width
 
     @width.setter
     def width(self, value):
         """class method for modify the value of width"""
-        if not isinstance(self.__width, int):
+
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if self.__width < 0:
+        if value < 0:
             raise ValueError("width must be >=0")
 
         self.__width = value
@@ -33,17 +35,20 @@ class Rectangle:
     @property
     def height(self):
         """class method for take the height of the rectangle"""
+
         return self.__height
 
     @height.setter
     def height(self, value):
         """class method for modify the value of height"""
-        if not isinstance(self.__height, int):
+
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if self.__height < 0:
+        if value < 0:
             raise ValueError("width must be >=0")
 
         self.__height = value
+
 
     def area(self):
         """class method for get the area of the rectangle"""
@@ -51,7 +56,7 @@ class Rectangle:
 
     def perimeter(self):
         """class method for get the perimeter of the rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
 
         return self.__width * 2 + self.__height * 2
