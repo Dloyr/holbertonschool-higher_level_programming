@@ -52,22 +52,22 @@ class Rectangle:
 
     def area(self):
         """class method for get the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """class method for get the perimeter of the rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
 
-        return self.__width * 2 + self.__height * 2
+        return self.width * 2 + self.height * 2
 
     def print(self):
         """class method for print the rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
 
-        for index_a in range(self.__height):
-            for index_b in range(self.__width):
+        for index_a in range(self.height):
+            for index_b in range(self.width):
                 print("#", end="")
             print()
 
@@ -75,11 +75,11 @@ class Rectangle:
         """class method for the representation of strings of rectangle"""
         rectangle_string = ""
 
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
 
-        for index_a in range(self.__height):
-            for index_b in range(self.__width):
+        for index_a in range(self.height):
+            for index_b in range(self.width):
                 rectangle_string += "#"
             rectangle_string += "\n"
 
