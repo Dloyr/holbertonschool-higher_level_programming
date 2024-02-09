@@ -68,7 +68,8 @@ class Square:
         """ instance method for print the square """
         if self.size == 0:
             print()
-        for index in range(self.position[1]):
-            print()
-        for row in range(self.size):
-            print(" " * self.position[0] + "#" * self.size)
+        else:
+            for index in range(self.position[1]):
+                print()
+            for row in range(self.size):
+                print(" " * self.position[0] + "#" * self.size)
