@@ -26,6 +26,11 @@ class Rectangle:
         else:
             self.__width = value
 
+    @classmethod
+    def square(cls, size=0):
+        """class method for return a square instance"""
+        return cls(size, size)
+
     @property
     def height(self):
         return self.__height
@@ -38,11 +43,6 @@ class Rectangle:
             raise ValueError("height must be >=0")
         else:
             self.__height = value
-
-    @classmethod
-    def square(cls, size=0):
-        """class method for return a square instance"""
-        return cls(size, size)
 
     def area(self):
         return self.width * self.height
