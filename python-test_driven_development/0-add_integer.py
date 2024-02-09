@@ -1,14 +1,22 @@
 #!/usr/bin/python3
 """
-    Adds 2 integers
-    Args:
-        a (int or float) : First value and b (int or float) : Second value
+
+Function that adds 2 integers.
+
 """
 
 
 def add_integer(a, b=98):
     """
-    Return: a + b
+    Args:
+        a: First value.
+        b: Second value. Defaults to 98.
+
+    Raises:
+        TypeError: If a or b is not an int or float.
+
+    Returns:
+        The addition of a and b.
     """
     if isinstance(a, (int, float)):
         a = int(a)
