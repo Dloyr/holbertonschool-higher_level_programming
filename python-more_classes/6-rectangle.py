@@ -8,16 +8,31 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        """initializes the rectangle.
+
+        Args:
+            width: rectangle width
+            height: rectangle height
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """width setter.
+
+        Args:
+            value (int): width value.
+        Raises:
+            TypeError: width must be an integer
+            ValueError: width must be >= 0
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -27,10 +42,19 @@ class Rectangle:
 
     @property
     def height(self):
+        """height getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height setter.
+
+        Args:
+            value (int): height value.
+        Raises:
+            TypeError: height must be an integer
+            ValueError: height must be >= 0
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
@@ -39,15 +63,18 @@ class Rectangle:
             self.__height = value
 
     def area(self):
+        """"instance method for get the perimeter"""
         return self.width * self.height
 
     def perimeter(self):
+        """instance method for get the perimeter"""
         if self.width == 0 or self.height == 0:
             return 0
         else:
             return self.width * 2 + self.height * 2
 
     def __str__(self):
+        """instance method for the representation of strings of rectangle"""
         rectangle_string = ""
         if self.width == 0 or self.height == 0:
             return ""
@@ -64,6 +91,6 @@ class Rectangle:
         return f'Rectangle({self.width}, {self.height})'
 
     def __del__(self):
-        """class method for delete the instantate object"""
+        """instance method for delete the instantate object"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
