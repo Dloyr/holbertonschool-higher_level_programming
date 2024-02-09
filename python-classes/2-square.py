@@ -12,7 +12,6 @@ class Square:
         Args:
             size (int): Size of the square
         """
-
         self.__size = size
         if (size is not int(size)):
             raise TypeError("size must be an integer")
