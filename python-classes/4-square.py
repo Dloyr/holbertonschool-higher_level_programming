@@ -12,27 +12,30 @@ class Square:
         Args:
             size (int): Size of the square
         """
-
-        self.__size = size
-        if (not isinstance(self.__size, int)):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        self.size = size
 
     @property  # declare a properties
     def size(self):
-        """ class method for take the size of the square """
+        """size getter"""
         return self.__size
 
     @size.setter  # modify the properties
     def size(self, value):
-        """ class method for modify value of size """
+        """size setter.
+
+        Args:
+            value: size value
+        Raises:
+            TypeError: size must be an integer
+            ValueError: size must be >= 0
+        """
         if (not isinstance(value, int)):
             raise TypeError("size must be an integer")
-        if (self.__size < 0):
+        elif (value < 0):
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     def area(self):
-        """ class method for obtain the area of the square """
-        return self.__size * self.__size
+        """ instance method for obtain the area of the square """
+        return self.size * self.size
