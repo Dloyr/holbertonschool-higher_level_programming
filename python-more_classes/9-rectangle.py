@@ -26,11 +26,6 @@ class Rectangle:
         else:
             self.__width = value
 
-    @classmethod
-    def square(cls, size=0):
-        """class method for return a square instance"""
-        return cls(size, size)
-
     @property
     def height(self):
         return self.__height
@@ -90,3 +85,7 @@ class Rectangle:
             return rect_2
         else:
             return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
