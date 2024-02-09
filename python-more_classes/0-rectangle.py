@@ -2,6 +2,7 @@
 
 """defines a rectangle"""
 
+
 class Rectangle:
-	"""rectangle is empty"""
-	pass
+    """rectangle is empty"""
+    pass
