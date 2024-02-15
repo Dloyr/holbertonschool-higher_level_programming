@@ -27,7 +27,6 @@ class Rectangle(BaseGeometry):
             width: private attribute width
             height: private attribute height
         """
-        super().__init__()
         self.__width = width
         self.__height = height
 
