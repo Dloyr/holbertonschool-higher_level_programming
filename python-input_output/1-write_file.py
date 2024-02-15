@@ -15,6 +15,4 @@ def write_file(filename="", text=""):
             the lenght of the text in file
     """
     with open(filename, "w", encoding="utf-8") as file:
-        file.write(text)
-        file.close()
-    return len(text)
+        return file.write(text)
