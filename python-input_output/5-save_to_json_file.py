@@ -7,11 +7,13 @@ from json import dumps
 
 
 def save_to_json_file(my_obj, filename):
-    """ write texte file in objects with a JSON representation
+    """ write text file in objects with a JSON representation
 
         Args:
             my_obj: the object
             filename: the name of the file
+        Returns:
+            the text file with JSON representation
     """
     json_object = dumps(my_obj)
     with open(filename, "w") as file:
