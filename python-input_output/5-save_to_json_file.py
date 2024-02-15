@@ -3,7 +3,7 @@
 """
 write an object to a text file with a JSON representation
 """
-from json import dumps
+import json
 
 
 def save_to_json_file(my_obj, filename):
@@ -15,6 +15,6 @@ def save_to_json_file(my_obj, filename):
         Returns:
             the text file with JSON representation
     """
-    json_object = dumps(my_obj)
+    json_object = json.dumps(my_obj)
     with open(filename, "w") as file:
         return file.write(json_object)
