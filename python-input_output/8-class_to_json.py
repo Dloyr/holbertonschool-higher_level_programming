@@ -7,9 +7,13 @@ import json
 
 
 def class_to_json(obj):
-    """function for return a dictionary description of obj in JSON file
+    """
+    function for return a dictionary description of obj in JSON file
 
     Args:
         obj: object to return
+
+    Returns:
+        dictionary descritption
     """
     return obj.__dict__
