@@ -1,34 +1,30 @@
 #!/usr/bin/python3
-
 """
-module for pascal triangle
+module 12-pascal_triangle
 """
 
 
 def pascal_triangle(n):
-    """function to create a pascal triangle
+    """pascal_triangle
 
     Args:
-        n: the size of the pascal triangle
+        n (int): contain the value 5 for the triangle
 
     Returns:
-        the triangle
+        list: return triangle that is a list of list
     """
-    if n < 1:
-        return []
-
     triangle = []
-    first_line = [1]
+    current_row = [1]
+    if n <= 0:
+        return triangle
+    triangle.append(current_row)
 
-    triangle.append(first_line)
+    for rows in range(1, n):
+        new_row = current_row + [1]
+        for column in range(len(current_row) - 1):
+            new_row[column + 1] = current_row[column] + current_row[column + 1]
+        current_row = new_row
 
-    for line in range(1, n):
-        new_line = [1]
-        for column in range(1, len(first_line)):
-            new_line.append(first_line[column - 1] + first_line[column])
-
-        new_line.append(1)
-        first_line = new_line
-        triangle.append(new_line)
+        triangle.append(current_row)
 
     return triangle
