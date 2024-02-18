@@ -3,8 +3,6 @@
 """
 dictionary description with simple data for JSON serialization
 """
-import json
-
 
 def class_to_json(obj):
     """
