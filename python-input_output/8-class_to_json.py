@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+"""
+dictionary description with simple data for JSON serialization
+"""
+import json
+
+
+def class_to_json(obj):
+    """function for return a dictionary description of obj in JSON file
+
+    Args:
+        obj: object to return
+    """
+    return obj.__dict__
