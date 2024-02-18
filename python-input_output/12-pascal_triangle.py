@@ -14,6 +14,9 @@ def pascal_triangle(n):
     Returns:
         the triangle
     """
+    if n < 1:
+        return
+
     triangle = []
     first_line = [1]
 
@@ -21,7 +24,6 @@ def pascal_triangle(n):
 
     for line in range(1, n):
         new_line = [1]
-
         for column in range(1, len(first_line)):
             new_line.append(first_line[column - 1] + first_line[column])
 
