@@ -15,5 +15,4 @@ def load_from_json_file(filename):
         all json object in file .json
     """
     with open(filename, "r") as file:
-        json_object = json.load(file)
-        return json_object
+        return json.load(file)
