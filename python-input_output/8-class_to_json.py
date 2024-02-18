@@ -4,6 +4,7 @@
 dictionary description with simple data for JSON serialization
 """
 
+
 def class_to_json(obj):
     """
     function for return a dictionary description of obj in JSON file
