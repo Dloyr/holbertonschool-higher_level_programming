@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-create a pascal triangle
+module for pascal triangle
 """
 
 
 def pascal_triangle(n):
-    """
-    function to create a pascal triangle
+    """function to create a pascal triangle
 
     Args:
         n: the size of the pascal triangle
@@ -15,7 +14,7 @@ def pascal_triangle(n):
         the triangle
     """
     if n < 1:
-        return
+        return []
 
     triangle = []
     first_line = [1]
