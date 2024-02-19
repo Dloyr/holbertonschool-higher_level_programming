@@ -109,6 +109,7 @@ class Rectangle(Base):
             raise TypeError(f"x must be an integer")
         if value < 0:
             raise ValueError(f"x must be >= 0")
+
         self.__x = value
 
     @property
