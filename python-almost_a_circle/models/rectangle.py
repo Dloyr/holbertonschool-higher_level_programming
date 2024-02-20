@@ -147,8 +147,11 @@ class Rectangle(Base):
 
     def display(self):
         """method for prints the rectangle"""
-        for line in range(self.height):
-            print("#" * self.width)
+        for index_y in range(self.y):
+            print()
+
+        for index_height in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self) -> str:
         """method for print the string representation of a rectangle"""
