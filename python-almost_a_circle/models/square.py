@@ -26,7 +26,7 @@ class Square(Rectangle):
         Returns:
             self.width and self.height
         """
-        return self.width and self.height
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -38,3 +38,21 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """modify the Rectangle method to return string representation"""
+        return (
+            f"[{self.__class__.__name__}] ({self.id}) "
+            f"{self.x}/{self.y} - {self.size}"
+        )
+
+    def update(self, *args, **kwargs):
+        """modify the Rectangle method for update the list of attributes"""
+        if args:
+            ordered_attributes = ["id", "size", "x", "y"]
+
+            for index in range(len(args)):
+                setattr(self, ordered_attributes[index], args[index])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
