@@ -17,3 +17,24 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
         # call parameters of Rectangle with width and height = size
+
+    @property
+    def size(self):
+        """
+        Getter method for size
+
+        Returns:
+            self.width and self.height
+        """
+        return self.width and self.height
+
+    @size.setter
+    def size(self, value):
+        """
+        Setter method for size
+
+        Args:
+            value (int): value of size
+        """
+        self.width = value
+        self.height = value
