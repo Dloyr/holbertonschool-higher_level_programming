@@ -159,3 +159,10 @@ class Rectangle(Base):
             f"[{self.__class__.__name__}] ({self.id}) "
             f"{self.x}/{self.y} - {self.width}/{self.height}"
         )
+
+    def update(self, *args):
+        """method for change the order of the attributes"""
+        ordered_attributes = ["id", "width", "height", "x", "y"]
+
+        for index in range(len(args)):
+            setattr(self, ordered_attributes[index], args[index])
