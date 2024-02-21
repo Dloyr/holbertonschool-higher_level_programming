@@ -37,6 +37,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -67,6 +68,6 @@ class Base:
             the list of dictionaries
         """
         if json_string is None or not json_string:
-            return []
+            return '[]'
         else:
-            json.loads(json_string)
+            return json.loads(json_string)
