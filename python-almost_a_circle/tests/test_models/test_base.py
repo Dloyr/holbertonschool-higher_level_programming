@@ -6,6 +6,10 @@ from models.base import Base
 
 class Test_class_Base(unittest.TestCase):
     """Test for the class Base"""
+    def test_id_is_None(self):
+        cls_B = Base()
+        self.assertEqual(1, cls_B.id)
+
     def test_id_int(self):
         """id is a number"""
         cls_B = Base(10)
@@ -55,6 +59,7 @@ class Test_class_Base(unittest.TestCase):
         """id is integer"""
         cls_B = Base({"id": 10})
         self.assertEqual({"id": 10}, cls_B.id)
+
 
 if __name__ == "__main__":
     unittest.main()
