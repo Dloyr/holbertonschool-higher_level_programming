@@ -40,7 +40,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        Method for save the list of objects of a class in a JSON file
+        Class method for save the list of objects of a class in a JSON file
 
         Args:
             cls (class): the class
