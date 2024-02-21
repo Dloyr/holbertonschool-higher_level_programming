@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Test case for module rectangle"""
 
-import unittest, sys
+import unittest
+import sys
 from io import StringIO
 from tests.test_models.test_base import Test_class_Base
 from models.rectangle import Rectangle
@@ -9,6 +10,10 @@ from models.rectangle import Rectangle
 
 class Test_class_Rectangle(Test_class_Base):
     """Test for the class Rectangle"""
+    def test_id_is_None(self):
+        cls_R = Rectangle(20, 10)
+        self.assertEqual(13, cls_R.id)
+
     def test_width_setter(self):
         """test the setter method of width"""
         cls_R = Rectangle(20, 10)
@@ -219,6 +224,7 @@ class Test_class_Rectangle(Test_class_Base):
 
         sys.stdout = sys.__stdout__
         self.assertEqual("#####\n#####\n", printed_output)
+
 
 if __name__ == "__main__":
     unittest.main()
