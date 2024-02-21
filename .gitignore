@@ -4,3 +4,9 @@
 *.pyc
 python-test_driven_development/6-max_integer.py
 python-everything_is_object/main.py
+*.json
+python-input_output/*_2.py 
+python-input_output/*.txt
+python-input_output/8-my_class.py
+python-input_output/Dockerfile
+
