@@ -67,7 +67,7 @@ class Base:
         Returns:
             the list of dictionaries
         """
-        if not json_string:
-            return "[]"
+        if json_string is None or not json_string:
+            return []
         else:
             return json.loads(json_string)
