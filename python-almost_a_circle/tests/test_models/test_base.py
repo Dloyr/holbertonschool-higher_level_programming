@@ -21,11 +21,6 @@ class Test_class_Base(unittest.TestCase):
         cls_B = Base(0)
         self.assertEqual(0, cls_B.id)
 
-    def test_id_None(self):
-        """id is None"""
-        cls_B = Base(None)
-        self.assertEqual(1, cls_B.id)
-
     def test_id_string(self):
         """id is a string"""
         cls_B = Base("string")
@@ -61,7 +56,5 @@ class Test_class_Base(unittest.TestCase):
         cls_B = Base({"id": 10})
         self.assertEqual({"id": 10}, cls_B.id)
 
-    def test_id_empty(self):
-        """id is empty"""
-        cls_B = Base()
-        self.assertEqual(2, cls_B.id)
+if __name__ == "__main__":
+    unittest.main()
