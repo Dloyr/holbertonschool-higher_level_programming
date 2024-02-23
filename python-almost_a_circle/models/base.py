@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for Base class"""
 import json
+from os import path
 
 
 class Base:
@@ -90,3 +91,26 @@ class Base:
         new_rectangle.update(**dictionary)
 
         return new_rectangle
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Class method for return a list of instances from a JSON file
+
+        Args:
+            cls (class): all class, parent and child
+
+        Returns:
+            the list of instances
+        """
+        filename = cls.__name__ + ".json"
+
+        if not path.isfile(filename):
+            return []
+
+        with open(filename, "r", encoding='utf-8') as file:
+            json_string = file.read()
+
+        dictionary_list = cls.from_json_string(json_string)
+
+        return [cls.create(**dictionary) for dictionary in dictionary_list]
