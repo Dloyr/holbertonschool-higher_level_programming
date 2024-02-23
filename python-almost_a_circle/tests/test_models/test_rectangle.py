@@ -11,9 +11,8 @@ from models.rectangle import Rectangle
 class Test_class_Rectangle(Test_class_Base):
     """Test for the class Rectangle"""
     def test_id_is_None(self):
-        """adapt the test for class rectangle"""
-        cls_R = Rectangle(20, 10)
-        self.assertEqual(13, cls_R.id)
+        cls_R = Rectangle(20, 10, 20, 10, None)
+        self.assertEqual(14, cls_R.id)
 
     def test_width_setter(self):
         """test the setter method of width"""
