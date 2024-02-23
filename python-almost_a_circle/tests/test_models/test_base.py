@@ -8,7 +8,7 @@ class Test_class_Base(unittest.TestCase):
     """Test for the class Base"""
     def test_id_is_None(self):
         """test for check if id is none"""
-        cls_B = Base()
+        cls_B = Base(None)
         self.assertEqual(1, cls_B.id)
 
     def test_id_int(self):
