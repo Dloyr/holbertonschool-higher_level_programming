@@ -69,11 +69,11 @@ class Test_class_Base(unittest.TestCase):
     def test_json_string(self):
         """JSON is a string"""
         cls_R = Rectangle(5, 2)
-        json_dict = cls_R.to_dictionary()
-        json_string = Base.to_json_string([json_dict])
+        json_dictionary = cls_R.to_dictionary()
+        json_string = Base.to_json_string([json_dictionary])
         self.assertEqual(type(json_string), str)
 
-    def test_to_json_value(self):
+    def test_json_dictionary(self):
         """Testing the json string"""
         cls_S = Square(16, 4, 4, 3)
         json_dictionary = cls_S.to_dictionary()
@@ -82,17 +82,17 @@ class Test_class_Base(unittest.TestCase):
             json.loads(json_dict_list), [{"size": 16, "x": 4, "y": 4, "id": 3}]
         )
 
-    def test_to_json_None(self):
+    def test_json_None(self):
         """JSON file is None"""
         cls_R = Rectangle(5, 2, 5, 2, 10)
-        json_dict = cls_R.to_dictionary()
+        json_dictionary = cls_R.to_dictionary()
         json_string = Base.to_json_string(None)
         self.assertEqual(json_string, "[]")
 
-    def test_to_json_Empty(self):
+    def test_json_Empty(self):
         """JSON file is empty"""
         cls_R = Rectangle(5, 2, 5, 2, 10)
-        json_dict = cls_R.to_dictionary()
+        json_dictionary = cls_R.to_dictionary()
         json_string = Base.to_json_string([])
         self.assertEqual(json_string, "[]")
 
