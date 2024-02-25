@@ -96,6 +96,24 @@ class Test_class_Base(unittest.TestCase):
         json_string = Base.to_json_string([])
         self.assertEqual(json_string, "[]")
 
+    def test_json_string_None(self):
+        """JSON string is None"""
+        json_string = None
+        None_list = Base.from_json_string(json_string)
+        self.assertEqual(None_list, [])
+
+    def test_json_empty_list(self):
+        """JSON list is empty"""
+        json_string = "[]"
+        empty_list = Base.from_json_string(json_string)
+        self.assertEqual(empty_list, [])
+
+    def test_json_id_string(self):
+        """JSON is dictionary"""
+        json_string = '[{ "id": 89 }]'
+        result = Base.from_json_string(json_string)
+        self.assertEqual(result, [{"id": 89}])
+
 
 if __name__ == "__main__":
     unittest.main()
