@@ -87,7 +87,7 @@ class Test_class_Base(unittest.TestCase):
         cls_R = Rectangle(5, 2, 5, 2, 10)
         json_dictionary = cls_R.to_dictionary()
         json_string = Base.to_json_string(None)
-        self.assertEqual(json_string, "[]")
+        self.assertEqual(json_string, [])
 
     def test_json_Empty(self):
         """JSON file is empty"""
