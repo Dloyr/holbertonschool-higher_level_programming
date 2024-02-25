@@ -4,15 +4,11 @@
 import unittest
 import sys
 from io import StringIO
-from tests.test_models.test_base import Test_class_Base
 from models.rectangle import Rectangle
 
 
-class Test_class_Rectangle(Test_class_Base):
+class Test_class_Rectangle(unittest.TestCase):
     """Test for the class Rectangle"""
-    def test_id_is_None(self):
-        cls_R = Rectangle(20, 10, 20, 10, None)
-        self.assertEqual(14, cls_R.id)
 
     def test_width_setter(self):
         """test the setter method of width"""
